@@ -225,45 +225,38 @@ the default option.
 We'll do that for most options.
 Now,
 
-![1]/(../../redhat_work/hyperconvergence/screenshots/image00.png)
-  
+![1]/(images/image00.png)
 
 Running the `hosted-engine –deploy` command when the NetworkManager service is
 running may result into an error such as the above, and stop execution.
 
 We need to stop this service to proceed.
 
-![2]/(../../redhat_work/hyperconvergence/screenshots/image01.png)
-
+![2]/(images/image01.png)
 
 Pressing the 'Enter' key here without typing 'Yes' will result into it
 accepting the default 'Yes' option in the square brackets.  
 
-![3]/(../../redhat_work/hyperconvergence/screenshots/image02.png)
-
+![3]/(images/image02.png)
 
 Here, we don't want to select the suggested default option **nfs3**. Instead, we
 type in **glusterfs** as our preferred storage.  
 
 
-![4]/(../../redhat_work/hyperconvergence/screenshots/image03.png)  
-
-
+![4]/(images/image03.png)
 
 We enter the volume path (10.209.65.225:/engine in our case) and proceed. For
 configuring IP tables, we say 'No', this is a temporary workaround as saying
 'Yes' results into gluster ports being left unopened.
 
-![5]/(../../redhat_work/hyperconvergence/screenshots/image04.png)
-
+![5]/(images/image04.png)
 
 The Engine VM FQDN name “hyperconvergence.virtual.com” is a dummy DNS name that
 we give at this stage, after adding an entry of this in the /etc/hosts file of
 our system, against a dummy IP address. We'll replace this IP address with that
 of the VM's IP address in further steps.
 
-![6]/(../../redhat_work/hyperconvergence/screenshots/image05.png)
-
+![6]/(images/image05.png)
 
 We want to configure oVirt with both Virt and Gluster mode. Automatically
 executing engine setup configures oVirt in Virt mode alone. So, when we're
@@ -271,19 +264,18 @@ asked if we want to automatically execute engine setup, we say 'No' and proceed
 with the other default options.
 
 
-![7]/(../../redhat_work/hyperconvergence/screenshots/image06.png)  
+![7]/(images/image06.png)
 
 We enter the number of CPUs and memory and accept the suggested name for our
 machine `('hosted_engine_1')`.
 
 
-![8]/(../../redhat_work/hyperconvergence/screenshots/image07.png)
-
+![8]/(images/image07.png)
   
 We choose to 'Continue Setup' and proceed.
   
 
-![9]/(../../redhat_work/hyperconvergence/screenshots/image08.png)
+![9](images/image08.png)
 
 At this stage, we have to login to our VM that our hosted engine setup created,
 to install oVirt on the VM. We do this because we chose to NOT run engine setup
@@ -300,25 +292,15 @@ remote-viewer vnc://10.209.65.225:5900
 required for remote access to our VM.
 
 
-  
-
-We enter the password that we set before.
-
-
-
-
-  
+We enter the password that we set before.  
 
 Sometimes, you may encounter an authentication failure such as the one above.
-
 
 In this case, you have to close the remote viewer, come back to your terminal
 where you entered the command for remote viewing, and enter the following
 command:
 
-
 ```hosted-engine –add-console-password```
-
 
 Setting the password here and then running the remote viewer command again
 should result in successful login.  
@@ -329,8 +311,6 @@ should result in successful login.
 
 
   
-
-
 
 Once the VM is launched, entering the 'ip addr' command will help us know the
 IP of the VM.
