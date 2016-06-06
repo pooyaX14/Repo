@@ -14,6 +14,6 @@ row of data:
 | Port Number | Usage                 |
 |-------------|-----------------------|
 | 111         | Remote Procedure Call |
-|             |                       |
-|             |                       |
+| 2049 | Network File System |
+| 54321 | VDSM (Red Hat Gluster Storage Console) |
 
