@@ -202,7 +202,7 @@ yum install ovirt-engine-appliance
 ```
 
 screen
-+++++
+++++++
 
 This command will open up a new terminal for us to work on. The advantage of
 using the screen terminal is that in case of a network disruption, our process
