@@ -6,3 +6,14 @@ Below is the screenshot of something.
 
 This is a link to the other md file named
 [README.md](README.md)
+
+
+Add a simple markdown table with a single
+row of data:
+
+| Port Number | Usage                 |
+|-------------|-----------------------|
+| 111         | Remote Procedure Call |
+|             |                       |
+|             |                       |
+
