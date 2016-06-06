@@ -1,10 +1,18 @@
-﻿This document takes you through how you can setup a hyperconverged environment on your laptop or machine.
+﻿Hyperconvergence setup on a single node
+=======================================
 
-The objective of this document is to become familiar with the concepts of a hyperconverged environment and gather a basic understanding of the steps involved in setting one up. An ideal hyperconverged environment however requires a minimum of three nodes or physical machines.
+This document takes you through how you can setup a hyperconverged environment on your laptop or machine.
+
+
+The objective of this document is to become familiar with the concepts of a
+hyperconverged environment and gather a basic understanding of the steps
+involved in setting one up. An ideal hyperconverged environment however
+requires a minimum of three nodes or physical machines.
 Pre-requisities: A laptop / system with CentOS 7 installed.
 
 
-We will be using CentOS 7 as the operating system, oVirt 3.6 for the virtualization manager and GlusterFS 3.7.11 as our filesystem.
+We will be using CentOS 7 as the operating system, oVirt 3.6 for the
+virtualization manager and GlusterFS 3.7.11 as our filesystem.
 
 
 The machine needs to have a wired network connection, which our setup will be accessing.
@@ -194,7 +202,8 @@ yum install ovirt-engine-appliance
 ```
 
 screen
-______
++++++
+
 This command will open up a new terminal for us to work on. The advantage of
 using the screen terminal is that in case of a network disruption, our process
 will resume from the last restore point and not get completely halted. Screen
@@ -204,7 +213,7 @@ The processes on the screen will run in the background, even if you detach a
 screen session. You can always attach it back whenever you want to work on it.
 
 
-```hosted-engine –-deploy
+```hosted-engine –-deploy```
 
 This launches the setup which involves creating a VM and preparing it to install oVirt.
 
