@@ -223,38 +223,38 @@ the default option.
 We'll do that for most options.
 Now,
 
-![1](images/image00.png)
+![0](images/image00.png)
 
 Running the `hosted-engine –deploy` command when the NetworkManager service is
 running may result into an error such as the above, and stop execution.
 
 We need to stop this service to proceed.
 
-![2](images/image01.png)
+![1](images/image01.png)
 
 Pressing the 'Enter' key here without typing 'Yes' will result into it
 accepting the default 'Yes' option in the square brackets.  
 
-![3](images/image02.png)
+![2](images/image02.png)
 
 Here, we don't want to select the suggested default option **nfs3**. Instead, we
 type in **glusterfs** as our preferred storage.  
 
 
-![4](images/image03.png)
+![3](images/image03.png)
 
 We enter the volume path (10.209.65.225:/engine in our case) and proceed. For
 configuring IP tables, we say 'No', this is a temporary workaround as saying
 'Yes' results into gluster ports being left unopened.
 
-![5](images/image04.png)
+![4](images/image04.png)
 
 The Engine VM FQDN name “hyperconvergence.virtual.com” is a dummy DNS name that
 we give at this stage, after adding an entry of this in the /etc/hosts file of
 our system, against a dummy IP address. We'll replace this IP address with that
 of the VM's IP address in further steps.
 
-![6](images/image05.png)
+![5](images/image05.png)
 
 We want to configure oVirt with both Virt and Gluster mode. Automatically
 executing engine setup configures oVirt in Virt mode alone. So, when we're
@@ -262,18 +262,20 @@ asked if we want to automatically execute engine setup, we say 'No' and proceed
 with the other default options.
 
 
-![7](images/image06.png)
+![6](images/image06.png)
 
 We enter the number of CPUs and memory and accept the suggested name for our
 machine `('hosted_engine_1')`.
 
 
-![8](images/image07.png)
+![7](images/image07.png)
+![8](images/image08.png)
+![9](images/image09.png)
   
 We choose to 'Continue Setup' and proceed.
   
 
-![9](images/image08.png)
+![11](images/image11.png)
 
 At this stage, we have to login to our VM that our hosted engine setup created,
 to install oVirt on the VM. We do this because we chose to NOT run engine setup
@@ -290,7 +292,11 @@ remote-viewer vnc://10.209.65.225:5900
 required for remote access to our VM.
 
 
+![12](images/image12.png)
+
 We enter the password that we set before.  
+
+![13](images/image13.png)
 
 Sometimes, you may encounter an authentication failure such as the one above.
 
@@ -300,15 +306,14 @@ command:
 
 ```hosted-engine –add-console-password```
 
+![14](images/image14.png)
+
 Setting the password here and then running the remote viewer command again
 should result in successful login.  
 
 
-  
-
-
-
-  
+![15](images/image15.png)
+![16](images/image16.png)
 
 Once the VM is launched, entering the 'ip addr' command will help us know the
 IP of the VM.
@@ -325,7 +330,7 @@ We have to now run 'engine-setup' on this VM (terminal) using the command
 'engine-setup' and once it's complete, we go back to the terminal on our host
 machine to continue with the rest of the setup.
 
-
+![17](images/image17.png)
 
 
   
@@ -336,7 +341,7 @@ virtualization manager using the IP of the VM
 
   
 
-
+![18](images/image18.png)
 
 The setup is successful. You can use this web service to manage VMs across all
 the nodes in an ideal setup. For this tutorial, we just have one.
